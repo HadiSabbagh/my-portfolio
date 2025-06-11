@@ -1,9 +1,9 @@
 import Image from "next/image";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
-export default function AboutMe({ id }) {
+export default function AboutMe({ id, ref}) {
   return (
-    <section
+    <section ref={ref}
       id={id}
       className="max-w-6xl mx-auto px-6 py-16 text-white font-robotoMono"
     >

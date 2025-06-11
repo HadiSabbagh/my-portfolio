@@ -1,14 +1,20 @@
 "use client";
+import { useRef } from "react";
 import Threads from "@/components/Threads";
-import ScrollDown from "@/components/ScrollDown";
+import ScrollArrow from "@/components/ScrollArrow";
 import AboutMe from "@/components/AboutMe";
-import StarBorder from "@/components/StarBorder";
 import BlurText from "@/components/BlurText";
+import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
   // const handleAnimationComplete = () => {
   //   console.log("Animation completed!");
   // };
+  const myRef = useRef(null);
+
+  function handleScrollDown() {
+    myRef.current.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <>
       <div className="flex flex-col gap-y-500">
@@ -54,21 +60,15 @@ export default function Home() {
               Building things that matter, one line at a time.
             </p> */}
           </div>
-          <ScrollDown
+          <ScrollArrow
+            className="animate-bounce absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 "
+            onScroll={handleScrollDown}
             direction="down"
-            nextSectionId="about-section"
-          ></ScrollDown>
+          ></ScrollArrow>
         </div>
 
-        <AboutMe id={"about-section"}></AboutMe>
-        <div>
-          <StarBorder
-            as="button"
-            className="custom-class"
-            color="red"
-            speed="5s"
-          ></StarBorder>
-        </div>
+        <AboutMe id={"about-section"} ref={myRef}></AboutMe>
+        <ProjectsSection></ProjectsSection>
       </div>
     </>
   );

@@ -1,9 +1,15 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       animation: {
-        'star-movement-bottom': 'star-movement-bottom linear infinite alternate',
-        'star-movement-top': 'star-movement-top linear infinite alternate',
+        'star-movement-bottom': 'star-movement-bottom 6s linear infinite alternate',
+        'star-movement-top': 'star-movement-top 6s linear infinite alternate',
       },
       keyframes: {
         'star-movement-bottom': {
@@ -16,6 +22,6 @@ module.exports = {
         },
       },
     },
-  }
-}
-
+  },
+  plugins: [],
+};
