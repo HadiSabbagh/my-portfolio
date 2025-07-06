@@ -15,7 +15,7 @@ export default function AboutMe({ref}) {
           <RevealOnScroll direction="right">
             <div className="w-48 h-48 rounded-full overflow-hidden">
               <Image
-                src="/hadisabbagh.github.io/me.jpg"
+                src="/my-portfolio/me.jpg"
                 alt="Abdulhady Sabbagh"
                 width={192}
                 height={192}
