@@ -1,11 +1,11 @@
 import Image from "next/image";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
-export default function AboutMe({ id, ref}) {
+export default function AboutMe({ref}) {
   return (
     <section ref={ref}
-      id={id}
-      className="max-w-6xl mx-auto px-6 py-16 text-white font-robotoMono"
+      id="about-section"
+      className="  min-h-screen max-w-5xl mx-auto px-6 py-16 text-white font-robotoMono"
     >
       <div className="flex flex-col lg:flex-row gap-20 justify-between">
         {/* Left column */}

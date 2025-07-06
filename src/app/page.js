@@ -3,72 +3,89 @@ import { useRef } from "react";
 import Threads from "@/components/Threads";
 import ScrollArrow from "@/components/ScrollArrow";
 import AboutMe from "@/components/AboutMe";
-import BlurText from "@/components/BlurText";
 import ProjectsSection from "@/components/ProjectsSection";
+import { Hinge, Slide } from "react-awesome-reveal";
+import RevealOnScroll from "@/components/RevealOnScroll";
+import ContactMe from "@/components/ContactMe";
 
 export default function Home() {
-  // const handleAnimationComplete = () => {
-  //   console.log("Animation completed!");
-  // };
-  const myRef = useRef(null);
+  const scrollRef = useRef(null);
 
   function handleScrollDown() {
-    myRef.current.scrollIntoView({ behavior: "smooth" });
+    scrollRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    const aboutSection = document.getElementById("about-section");
+    const timer = setTimeout(() => {
+      const aboutSection = document.getElementById("about-section");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 1400);
   }
+
   return (
     <>
-      <div className="flex flex-col gap-y-500">
-        <div className="relative w-screen h-screen overflow-hidden">
-          <div className="absolute inset-0 -z-10">
+      <div className="flex flex-col  ">
+        <div className="relative w-screen min-h-screen overflow-hidden">
+          <section className="absolute inset-0 -z-10">
             <Threads
               amplitude={3}
               distance={0.2}
               enableMouseInteraction={true}
             />
-          </div>
+          </section>
 
           {/* Centered text container */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center space-y-2 z-10">
-            <BlurText
-              text="FULLSTACK ENGINEER"
-              delay={150}
-              animateBy="words"
-              direction="top"
-              // onAnimationComplete={handleAnimationComplete}
-              className="text-sm sm:text-base md:text-lg font-normal tracking-widest font-inriaSans"
-            />
-            <BlurText
-              text="Abdulhady Sabbagh"
-              delay={150}
-              animateBy="words"
-              direction="top"
-              // onAnimationComplete={handleAnimationComplete}
-              className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest font-inriaSans"
-            />
+          <section className="absolute inset-0 flex flex-col items-center justify-center text-white text-center space-y-2 z-10">
+            <RevealOnScroll delay={0.9}>
+              <h2 className="text-sm sm:text-base md:text-lg font-normal tracking-widest font-inriaSans">
+                FULLSTACK ENGINEER
+              </h2>
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.3} direction="right">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest font-inriaSans">
+                Abdulhady Sabbagh
+              </h2>
+            </RevealOnScroll>
+
             {/* <p className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest font-inriaSans">
               Abdulhady Sabbagh
             </p> */}
-            <BlurText
-              text="Building things that matter, one line at a time."
-              delay={150}
-              animateBy="words"
-              direction="top"
-              // onAnimationComplete={handleAnimationComplete}
-              className="text-xs sm:text-sm md:text-sm font-light tracking-widest font-robotoMono"
-            />
+
+            <Hinge delay={3000} triggerOnce>
+              <RevealOnScroll delay={0.6} direction="down">
+                <h2
+                  className="text-xs sm:text-sm md:text-sm font-light
+              tracking-widest font-robotoMono"
+                >
+                  Fixing the code.
+                </h2>
+              </RevealOnScroll>
+            </Hinge>
             {/* <p className="text-xs sm:text-sm md:text-sm font-light tracking-widest font-robotoMono ">
               Building things that matter, one line at a time.
             </p> */}
-          </div>
+          </section>
           <ScrollArrow
             className="animate-bounce absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 "
             onScroll={handleScrollDown}
             direction="down"
           ></ScrollArrow>
         </div>
+        <div
+          ref={scrollRef}
+          className="relative w-screen min-h-screen inset-0 flex flex-col items-center justify-center text-white text-center text-2xl sm:text-3xl md:text-4xl "
+        >
+          <Slide triggerOnce>Let me tell you about myself &#128075;</Slide>
+        </div>
 
-        <AboutMe id={"about-section"} ref={myRef}></AboutMe>
-        <ProjectsSection></ProjectsSection>
+        <div className="flex flex-col gap-[30vw]">
+          <AboutMe></AboutMe>
+
+          <ProjectsSection></ProjectsSection>
+
+          <ContactMe></ContactMe>
+        </div>
       </div>
     </>
   );
