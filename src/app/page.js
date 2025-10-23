@@ -39,7 +39,7 @@ export default function Home() {
           <section className="absolute inset-0 flex flex-col items-center justify-center text-white text-center space-y-2 z-10">
             <RevealOnScroll delay={0.9}>
               <h2 className="text-sm sm:text-base md:text-lg font-normal tracking-widest font-inriaSans">
-                FULLSTACK ENGINEER
+              SOFTWARE ENGINEER
               </h2>
             </RevealOnScroll>
             <RevealOnScroll delay={0.3} direction="right">
