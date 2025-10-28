@@ -7,6 +7,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import { Hinge, Slide } from "react-awesome-reveal";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ContactMe from "@/components/ContactMe";
+import ExperienceSection from "@/components/ExperienceSection";
 
 export default function Home() {
   const scrollRef = useRef(null);
@@ -81,6 +82,8 @@ export default function Home() {
 
         <div className="flex flex-col gap-[30vw]">
           <AboutMe></AboutMe>
+          
+          <ExperienceSection></ExperienceSection>
 
           <ProjectsSection></ProjectsSection>
 
