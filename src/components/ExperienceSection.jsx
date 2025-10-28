@@ -27,7 +27,7 @@ export default function experienceSection() {
     <section id="experience" className="snap-start w-full py-16 bg-neutral-950 sm:mt-24 ">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10 text-center">
-          experience
+          Experience
         </h2>
 
         <div className="px-6 py-12 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 flex justify-center">
