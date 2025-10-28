@@ -31,7 +31,7 @@ export default function experienceSection() {
           Experience
         </h2>
 
-        <div className="px-6 py-12 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 flex justify-center">
+        <div className="px-6 py-12 grid gap-8 sm:grid-row-1 md:grid-row-2 lg:grid-row-2 flex justify-center">
           {experience.map((project, index) => (
             <motion.div
               key={index}
@@ -39,7 +39,7 @@ export default function experienceSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative  p-[2px] rounded-xl bg-gradient-to-br from-gray-800 via-gray-600 to-gray-400 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-shadow duration-300"
+              className="relative  p-[2px] rounded-xl bg-gradient-to-b from-stone-500 to-stone-700 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-shadow duration-300"
             >
               <div className="bg-[#121212] rounded-xl p-6 h-full">
                 {project.githubLink ? (

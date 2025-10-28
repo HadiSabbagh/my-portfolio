@@ -40,7 +40,7 @@ export default function Home() {
           <section className="absolute inset-0 flex flex-col items-center justify-center text-white text-center space-y-2 z-10">
             <RevealOnScroll delay={0.9}>
               <h2 className="text-sm sm:text-base md:text-lg font-normal tracking-widest font-inriaSans">
-              SOFTWARE ENGINEER
+                SOFTWARE ENGINEER
               </h2>
             </RevealOnScroll>
             <RevealOnScroll delay={0.3} direction="right">
@@ -80,9 +80,9 @@ export default function Home() {
           <Slide triggerOnce>Let me tell you about myself &#128075;</Slide>
         </div>
 
-        <div className="flex flex-col gap-[30vw]">
+        <div className="flex flex-col">
           <AboutMe></AboutMe>
-          
+
           <ExperienceSection></ExperienceSection>
 
           <ProjectsSection></ProjectsSection>
