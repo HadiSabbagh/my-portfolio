@@ -47,21 +47,21 @@ export default function AboutMe({ref}) {
                 like React, Next.js, Django, and machine learning with Python.
               </p>
               <p>
-                My journey with computers started early—I’ve been exploring,
-                fixing, and experimenting with technology since I was five. By
-                age twelve, I was already solving real-world problems, from
+                My journey with computers started early.I've been exploring,
+                fixing, and experimenting with computers since I was five. By
+                age twelve, I was already formatting my computer, removing damaged hard drives, replacing ram, and fixing various other problems from
                 video game performance issues on my computer to system-level
-                errors I had while also trying to play video games 😭.
+                errors I had while trying to play video games 😭.
               </p>
               <p>
                 This hands-on curiosity laid the foundation for my
                 problem-solving mindset and passion for software development.
-                Though I’m just beginning my professional journey, I’ve built a
+                Though I'm just beginning my professional journey, I've built a
                 solid foundation through academic projects and personal
                 exploration.
               </p>
               <p>
-                I’m always eager to collaborate on meaningful projects and
+                I'm always eager to collaborate on meaningful projects and
                 thrive in team environments where learning and innovation are
                 valued. My strengths lie in rapidly approaching problems with
                 curiosity and logic, strong foundational programming skills, and
@@ -86,8 +86,7 @@ export default function AboutMe({ref}) {
               <h4 className="text-xl font-bold mb-2">Research</h4>
               <p className="text-base leading-relaxed">
                 Currently, I'm involved in research exploring the use of large
-                language models for grading open-ended student responses—an
-                exciting intersection of AI and education.
+                language models for grading open-ended student responses. It is funded by TÜİBTAK 1002.
               </p>
             </div>
           </RevealOnScroll>
@@ -97,14 +96,11 @@ export default function AboutMe({ref}) {
               <h4 className="text-xl font-bold mb-2">Hobbies</h4>
               <p className="text-base leading-relaxed">
                 I also enjoy walking, going out with friends, and staying active
-                outside of tech. Whether it's exploring new places, trying out
-                local food spots, or just having great conversations, I value
-                meaningful connections and balance in life. These moments help
-                me recharge and bring fresh perspective to the work I do. I’m
-                also an avid gamer—playing video games has not only been a
+                outside of tech. I value meaningful connections and balance in life. These moments help
+                me recharge and bring fresh perspective to the work I do. I'm
+                also an avid gamer. Video games have not only been a
                 source of fun but also one of the earliest sparks for my
-                interest in computers and problem-solving. It’s where my
-                curiosity for tech first took root, and it still helps me unwind
+                interest in computers. It's where my curiosity for tech first took root, and it still helps me unwind
                 and stay sharp today.
               </p>
             </div>
