@@ -2,6 +2,7 @@
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { MdOutlineWork } from "react-icons/rx";
 
 
 const experience = [
